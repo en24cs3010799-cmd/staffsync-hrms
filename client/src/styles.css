@@ -1,0 +1,127 @@
+:root {
+  --sidebar-w: 240px;
+  --brand: #4f46e5;
+  --sidebar-bg: #1e1b4b;
+}
+
+body {
+  background: #f4f6fb;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--sidebar-bg);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem 0.75rem;
+  z-index: 1030;
+  transition: transform 0.2s ease;
+}
+
+.sidebar .brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+}
+
+.side-link {
+  color: #c7d2fe;
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.15rem;
+  display: block;
+}
+
+.side-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.side-link.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+.main-area {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  background: #fff;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.stat-card {
+  border: 0;
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.card {
+  border: 0;
+  border-radius: 0.9rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1b4b 0%, #4f46e5 100%);
+  padding: 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main-area {
+    margin-left: 0;
+  }
+}

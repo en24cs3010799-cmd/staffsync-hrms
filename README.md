@@ -56,6 +56,8 @@ npm run dev         # App on http://localhost:5173
 ```
 
 Vite proxies `/api` to `http://localhost:5000`, so no extra config is needed.
+https://staffsync-hrms-2.onrender.com
+https://staffsync-hrms-1.onrender.com
 
 ### Demo logins (after `npm run seed`)
 
